@@ -29,4 +29,13 @@
 
   ```
   - Load these to your DigiSpark or RubberDucky, and you're all set! Enjoy!
-  -# and please don't cause damage 
+-# And please don't cause damage!
+# Additional info:
+```
+The c.cmd file runs every startup.
+This means an attacker could place a
+'wget' or 'Invoke-WebRequest' and have a file
+be downloaded from anywhere on the internet onto the computer.
+The file would then save in the startup directory,
+allowing it to run every startup.
+```
