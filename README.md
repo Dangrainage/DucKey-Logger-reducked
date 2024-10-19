@@ -22,7 +22,11 @@
  # Instructions
   - Enable LSA Access to your Gmail account
   - Change the Gmail credidentials in *p.ps1*
-- ```  # gmail credentials
+- ```
+  # gmail credentials
   $email = "example@gmail.com"
-  $password = "password" ```
-   
+  $password = "password"
+
+  ```
+  - Load these to your DigiSpark or RubberDucky, and you're all set! Enjoy!
+  -# and please don't cause damage 
