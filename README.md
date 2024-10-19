@@ -1,3 +1,5 @@
+# WIP and still untested as of now!
+
 # Overview:
 - Downloads and moves c.cmd, p.ps1 and l.ps1 file to windows startup directory from web or PixelDrain
 - *c.cmd* will secretly run p.ps1
