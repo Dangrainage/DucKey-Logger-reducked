@@ -21,6 +21,7 @@
 
  # Instructions
   - Enable LSA Access to your Gmail account
+  - Upload all three of the files in the Dependancies folder to PixelDrain or onto a website directory.
   - Change the Gmail credidentials in *p.ps1*
 - ```
   # gmail credentials
