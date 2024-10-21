@@ -1,4 +1,3 @@
-// Converted using digiQuack by CedArctic (https://github.com/CedArctic/digiQuack) 
 
 #include "DigiKeyboard.h"
 
